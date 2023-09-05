@@ -1,0 +1,14 @@
+{
+  "name": "tm-front",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start -p 8080",
+    "lint": "eslint \"{src,}/**/{*.ts,**/*.tsx}\" --fix"
+  },
+  "dependencies": {
+    "next": "13.4.10"
+  }
+}
