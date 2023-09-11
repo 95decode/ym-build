@@ -32,12 +32,25 @@ var next_image = __webpack_require__(675);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
 // EXTERNAL MODULE: external "next/router"
 var router_ = __webpack_require__(853);
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__(689);
 ;// CONCATENATED MODULE: ./src/components/Header.tsx
+
 
 
 
 const Header = ()=>{
     const router = (0,router_.useRouter)();
+    const [popupIsOpen, setPopupIsOpen] = (0,external_react_.useState)(true);
+    (0,external_react_.useEffect)(()=>{
+        const escKeyModalClose = (e)=>{
+            if (e.key === "Escape") {
+                setPopupIsOpen(false);
+            }
+        };
+        window.addEventListener("keydown", escKeyModalClose);
+        return ()=>window.removeEventListener("keydown", escKeyModalClose);
+    }, []);
     return /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
         className: "fixed w-full z-50 text-ym-gray-2",
         children: [
@@ -53,7 +66,9 @@ const Header = ()=>{
                             height: 48,
                             alt: "Banner",
                             onClick: ()=>{
-                                router.push("/");
+                                router.push("/").then(()=>{
+                                    setPopupIsOpen(false);
+                                });
                             }
                         })
                     }),
@@ -66,7 +81,9 @@ const Header = ()=>{
                             height: 26,
                             alt: "Banner",
                             onClick: ()=>{
-                                router.push("/");
+                                router.push("/").then(()=>{
+                                    setPopupIsOpen(false);
+                                });
                             }
                         })
                     })
@@ -80,7 +97,9 @@ const Header = ()=>{
                         /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                             className: "group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-pointer",
                             onClick: ()=>{
-                                router.push("/");
+                                router.push("/").then(()=>{
+                                    setPopupIsOpen(false);
+                                });
                             },
                             children: [
                                 /*#__PURE__*/ jsx_runtime.jsx("div", {
@@ -95,7 +114,9 @@ const Header = ()=>{
                         /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                             className: "group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-pointer",
                             onClick: ()=>{
-                                router.push("/prostate");
+                                router.push("/prostate").then(()=>{
+                                    setPopupIsOpen(false);
+                                });
                             },
                             children: [
                                 /*#__PURE__*/ jsx_runtime.jsx("div", {
@@ -110,7 +131,9 @@ const Header = ()=>{
                         /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                             className: "group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-pointer",
                             onClick: ()=>{
-                                router.push("/directions");
+                                router.push("/directions").then(()=>{
+                                    setPopupIsOpen(false);
+                                });
                             },
                             children: [
                                 /*#__PURE__*/ jsx_runtime.jsx("div", {
@@ -124,6 +147,37 @@ const Header = ()=>{
                         })
                     ]
                 })
+            }),
+            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                className: `hidden ${popupIsOpen ? "pc:block" : ""} mt-[70px] ml-[340px] w-[600px] h-[800px] z-30`,
+                children: [
+                    /*#__PURE__*/ jsx_runtime.jsx("div", {
+                        className: "absolute z-20 h-[46px] bottom-[43px] left-[380px] w-[204px] hover:cursor-pointer",
+                        onClick: ()=>{
+                            router.push("/prostate").then(()=>{
+                                setPopupIsOpen(false);
+                            });
+                        }
+                    }),
+                    /*#__PURE__*/ jsx_runtime.jsx("div", {
+                        className: "absolute z-20 w-[23px] h-[23px] bottom-[760px] left-[900px] border hover:cursor-pointer flex items-center justify-center text-white",
+                        onClick: ()=>{
+                            setPopupIsOpen(false);
+                        },
+                        children: /*#__PURE__*/ jsx_runtime.jsx((image_default()), {
+                            src: "/images/Close.png",
+                            width: 17,
+                            height: 17,
+                            alt: "Close"
+                        })
+                    }),
+                    /*#__PURE__*/ jsx_runtime.jsx((image_default()), {
+                        src: "/images/Popup.png",
+                        width: 600,
+                        height: 800,
+                        alt: "Popup"
+                    })
+                ]
             })
         ]
     });
@@ -132,8 +186,6 @@ const Header = ()=>{
 // EXTERNAL MODULE: external "next/head"
 var head_ = __webpack_require__(968);
 var head_default = /*#__PURE__*/__webpack_require__.n(head_);
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(689);
 ;// CONCATENATED MODULE: ./src/components/Contact.tsx
 
 
@@ -221,7 +273,7 @@ const Contact = ()=>{
                             /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
                                 className: "w-[40px] pc:w-[57px] h-[40px] pc:h-[57px] rounded-full overflow-hidden bg-ym-blue-3 pc:bg-ym-blue-5 flex items-center justify-center pc:mb-[11px] hover:cursor-pointer",
                                 onClick: ()=>{
-                                    console.log("TODO");
+                                    location.href = "tel:01058830348";
                                 },
                                 children: [
                                     /*#__PURE__*/ jsx_runtime.jsx((image_default()), {
