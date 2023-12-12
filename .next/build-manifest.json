@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/w9Pd0cWbVtMo9KCcfiDAQ/_buildManifest.js",
-    "static/w9Pd0cWbVtMo9KCcfiDAQ/_ssgManifest.js"
+    "static/rfh8ydQi-bpi7DBHp29FV/_buildManifest.js",
+    "static/rfh8ydQi-bpi7DBHp29FV/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -39,7 +39,7 @@
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
       "static/chunks/framework-7a7e500878b44665.js",
       "static/chunks/main-2ecf43899f8683c2.js",
-      "static/chunks/pages/notice-9908f40d07286bde.js"
+      "static/chunks/pages/notice-c670f4e45f11bf2a.js"
     ],
     "/prostate": [
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
