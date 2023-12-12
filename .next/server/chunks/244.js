@@ -144,6 +144,23 @@ const Header = ()=>{
                                     className: `border ${router.asPath === "/directions" ? "border-black" : "group-hover:border-black border-transparent"} w-full pc:w-[115px]`
                                 })
                             ]
+                        }),
+                        /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
+                            className: "group h-[50px] pc:h-[89px] pc:w-full flex flex-col items-center hover:cursor-pointer",
+                            onClick: ()=>{
+                                router.push("/notice").then(()=>{
+                                    setPopupIsOpen(false);
+                                });
+                            },
+                            children: [
+                                /*#__PURE__*/ jsx_runtime.jsx("div", {
+                                    className: `h-[50px] pc:h-[89px] flex items-center ${router.asPath === "/notice" ? "text-black" : "group-hover:text-black"}`,
+                                    children: "공지사항"
+                                }),
+                                /*#__PURE__*/ jsx_runtime.jsx("div", {
+                                    className: `border ${router.asPath === "/notice" ? "border-black" : "group-hover:border-black border-transparent"} w-full pc:w-[115px]`
+                                })
+                            ]
                         })
                     ]
                 })

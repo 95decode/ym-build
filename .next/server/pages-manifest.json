@@ -4,6 +4,7 @@
   "/_error": "pages/_error.js",
   "/": "pages/index.html",
   "/prostate": "pages/prostate.html",
+  "/notice": "pages/notice.html",
   "/directions": "pages/directions.html",
   "/404": "pages/404.html"
 }
